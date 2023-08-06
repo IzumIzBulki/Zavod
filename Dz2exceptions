@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 public class HW2 {
     public static void main(String[] args) {
+        
         Scanner sc = new Scanner(System.in);
         System.out.println("Задача № 1");
 
@@ -13,11 +14,12 @@ public class HW2 {
         } catch (InvalidNumberException ex) {
             System.out.println(ex.getMessage());
         } catch (InputMismatchException ex) {
-            System.out.println("Некорректный ввод!");
+            System.out.println("Некорректный ввод! Вводите целые числа!");
         }
         sc.nextLine();
         System.out.println();
-        System.out.println("Задача № 2");
+     
+        System.out.println(" Задача № 2 ");
         try {
             System.out.print("Введите первое целое число: ");
             int a = sc.nextInt();
@@ -31,3 +33,16 @@ public class HW2 {
         }
         sc.nextLine();
         System.out.println();
+ }
+
+class InvalidNumberException extends Exception {
+    public InvalidNumberException(String message) {
+        super(message);
+    }
+}
+
+class DivisionByZeroException extends Exception {
+    public DivisionByZeroException(String message) {
+        super(message);
+    }
+}
